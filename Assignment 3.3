@@ -1,0 +1,21 @@
+#This assignment is to prompt the user a score that will only accept numbers
+
+#input variable for score
+score = input("Enter Score: ")
+#try block to ensure only float numbers are accepted 
+try:
+  s = float(score)
+except:
+    print("Please enter a valid score")
+    quit()
+#if statement to print a grade based on score inputted 
+if s >= 0.9:
+    print("A")
+elif s >= 0.8:
+    print("B")
+elif s >= 0.7:
+    print("C")
+elif s >= 0.6:
+    print("D")
+elif s < 0.6:
+    print("f")
