@@ -1,0 +1,24 @@
+#This assignment is for finding the average of a line in a file.
+ 
+#This starts with and input for the file name and opening the file
+fname = input("Enter file name: ")
+fh = open(fname)
+#here is the line count and total this will be used for calculating the average 
+linecount = 0
+total = 0
+#for loop find what we are looking for in the file
+for line in fh:
+#narrow it down to the text "X-DSPAM-Confidence:"
+    if line.startswith("X-DSPAM-Confidence:"):
+    #Then norrow it down futher to finding the 0
+        text = line.find("0")
+      #convert the number found to a float
+        number = float(line[text:])
+      #start counting how many lines of "X-DSPAM-Confidence:" there are
+        linecount = linecount + 1
+      #create a variable called total to get the total amount of numbers from the "X-DSPAM-Confidence:" line
+        total = total + number
+#avg to calculate the average         
+avg = total/linecount
+#printing the average
+print("Average spam confidence:",avg)
