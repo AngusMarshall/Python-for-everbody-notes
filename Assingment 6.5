@@ -1,0 +1,14 @@
+#This assignmet is for searching for a piece of text within a string
+# I am tasked for finding  0.8475
+
+text = "X-DSPAM-Confidence:    0.8475"
+#b for beginning is looking for the string "0"
+b = text.find("0")
+#e for end is looking for string "5"
+e = text.find('5')
+#f for found is concatenating the two pieces of text and +1 to get the end of the text 
+f = text [b : e+1]
+#converting the string to float
+found = float(f)
+#printing the found string 
+print(found)
