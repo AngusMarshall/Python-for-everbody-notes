@@ -1,0 +1,33 @@
+#This assignment is to promt the user for a list of of numbers and then finding the highest and lowest number. This will also prevent invalid inputs without throwing a callback.
+#Setting largest and smallest variables as none (0)
+largest = None
+smallest = None
+#while statement to ask for an input until it is told to stop with break, it will look for the string "done"
+while True:
+    num = input("Enter a number: ")
+    if num == "done":
+        break
+#try to prevent the code from breaking if there anything other than a number is inputted        
+    try:
+        numb = int(num)
+    except:
+        print("Invalid input")
+#continue is key to this as it does not stop the loop and will continue to prompt for input until told otheriwse        
+        continue
+ #if statements to figure out the largest and smallest
+ #if largest is none then it will be equal to whatever is inputted into numb
+    if largest is None:
+        largest = numb
+ #This will check to see if there are any larger numbers within the list of numbers inputted       
+    elif largest < numb:
+        largest = numb
+  #the same happens with the smallest  but its must be less than what is inputted     
+    if smallest is None:
+        smallest = numb
+    elif smallest > numb:
+        smallest = numb
+    
+    
+#Print out largest and smallest
+print("Maximum is", largest)
+print("Minimum is", smallest)
