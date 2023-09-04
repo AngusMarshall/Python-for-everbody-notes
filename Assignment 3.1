@@ -1,0 +1,18 @@
+#This assignment is to calculate gross pay and over time
+#Create two input variables
+hrs = input("Enter Hours:")
+rate = input("Enter rate:")
+#convert the inputs to a floating point
+h = float(hrs)
+r = float(rate)
+#if loop to calculate the pay
+#if hours worked if greater than 40 reg(regular pay is hours * rate) ot(over time is number of hours minus 40 times then times by the over time rate of (rate time 0.5)
+#else its is normal time
+if h > 40:
+    reg = h * r
+    ot = (h - 40) * (r * 0.5)
+    pay = reg + ot
+else:
+    pay = h * r
+
+print (pay)
