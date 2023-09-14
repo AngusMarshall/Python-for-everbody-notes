@@ -1,0 +1,18 @@
+iP = input("Please enter a principal amount:")
+iR = input("Please enter a annual rate:")
+iN = input("Please enter a compound period:")
+it = input("Please enter the amount of years:")
+
+P = float(iP)
+R = float(iR)
+n = float(iN)
+t = float(it)
+
+A = R / 100
+B = A / n
+C = 1 + B
+D = n * t
+E = pow(C, D)
+F = P * E
+
+print(F)
