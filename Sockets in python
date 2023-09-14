@@ -2,3 +2,13 @@ import socket
 #Mysock is the socket variable 
 mysock = socket.socket()
 mysock.connect()
+
+######
+
+#Using a while loop for reciveing data
+while true:
+     data = myscok.recv()
+     if (len(data) < 1:
+        break
+     print(data.decode())
+mysock.close
