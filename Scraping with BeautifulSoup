@@ -1,0 +1,18 @@
+import urllib.request
+from bs4 import BeautifulSoup
+
+#http://py4e-data.dr-chuck.net/comments_1740332.html
+url = input('Enter - ')
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html, 'html.parser')
+
+span_count = 0
+sum = 0
+
+# Retrieve all of the anchor tags
+tags = soup('span')
+for tag in tags:
+   sum += int(tag.contents[0])
+   span_count = span_count + 1
+print('Sum =', sum)
+print('Span count =', span_count)
